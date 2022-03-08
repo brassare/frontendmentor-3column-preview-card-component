@@ -1,0 +1,120 @@
+  :root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-darkcyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+    --Very-lightgray: hsl(0, 0%, 95%); /*background, titulos, buttons*/
+
+    --font-size: 15px;
+    --font-family: "Lexend Deca", "Big Shoulders Display", sans-serif;
+  }
+
+  /*Body*/
+
+  .body {
+    font-size: var(--font-size);
+    background-color: var(--Very-lightgray);
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*Container*/
+  .container {
+    display: grid;
+    grid-template-areas:
+      "sedans"
+      "suvs"
+      "luxury";
+    padding: 0px;
+    width: 90%;
+    margin: 60px auto;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  /*Divisões*/
+
+  .div {
+    display: block;
+  }
+
+  .sedans {
+    background-color: var(--Bright-orange);
+    font-family: var(--font-family);
+    display: grid;
+    grid-area: sedans;
+    padding: 50px;
+  }
+  .suvs {
+    background-color: var(--Dark-cyan);
+    font-family: var(--font-family);
+    display: grid;
+    grid-area: suvs;
+    padding: 50px;
+  }
+  .luxury {
+    background-color: var(--Very-darkcyan);
+    font-family: var(--font-family);
+    display: grid;
+    grid-area: luxury;
+    padding: 50px;
+  }
+
+  /*Titulo*/
+
+  .titulo__principal {
+    color: var(--Very-lightgray);
+    margin: 5px 0;
+    padding: 5px 0;
+  }
+
+  /*Parágrafo*/
+  p {
+    color: var(--Transparent-white);
+    margin: auto;
+    padding: 0 20px 0 0;
+  }
+
+  /*Botões*/
+  .botao {
+    text-decoration: none;
+    background-color: var(--Very-lightgray);
+    border-radius: 30px;
+    width: 65%;
+    display: block;
+    margin-top: 25px;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .botao__sedans {
+    color: var(--Bright-orange);
+  }
+  .botao__suvs {
+    color: var(--Dark-cyan);
+  }
+  .botao__luxury {
+    color: var(--Very-darkcyan);
+  }
+
+  
+
+  @media only screen and (min-width: 1440px){
+    body {
+      padding:  0px;
+      margin: 0px;
+    }
+
+    .container {
+      overflow: hidden;
+      display: flex;
+      margin-top: 50px;
+      width: 70%;
+      min-height: 50vh;
+      }
+      .botao{
+        height: 20%;
+      }
+  }
